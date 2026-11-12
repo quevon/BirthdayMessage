@@ -40,6 +40,15 @@ document.addEventListener("DOMContentLoaded", async () => {
     "letters/person2.html",
     "letters/person3.html",
     "letters/person4.html",
+    "letters/person5.html",
+    "letters/person6.html",
+    "letters/person7.html",
+    "letters/person8.html",
+    "letters/person9.html",
+    "letters/person10.html",
+    "letters/person11.html",
+    "letters/person12.html",
+    "letters/person13.html",
   ];
 
   let currentIndex = 0;
