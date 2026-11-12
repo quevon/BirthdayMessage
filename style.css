@@ -26,6 +26,7 @@ body {
     radial-gradient(circle at 50% 35%, #1c3150 0%, transparent 45%),
     linear-gradient(135deg, #080d18, #101d32 55%, #080d18);
   overflow-x: hidden;
+  overflow-y: hidden;
 }
 
 /* BACKGROUND PARTICLES */
