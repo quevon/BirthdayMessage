@@ -6,96 +6,137 @@
     <title>Happy Birthday Ian!</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
     <link
       href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
       rel="stylesheet"
     />
+
     <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
   </head>
 
   <body>
+    <div id="particles"></div>
+
     <main class="page">
       <div class="container">
-        <div class="top-label">A Celebration of You</div>
+        <div class="top-label">
+          <span class="label-line"></span>
+          <span>A SPECIAL DAY</span>
+          <span class="label-line"></span>
+        </div>
 
-        <h1>Happy Birthday<br />Ian!</h1>
+        <h1>Happy Birthday, <span>Ian!</span></h1>
 
-        <p class="subtitle">Another year. More memories. Greater adventures.</p>
+        <p class="subtitle">
+          Today is all about celebrating you. Here's a little something from all
+          of us.
+        </p>
 
-        <div class="divider"></div>
+        <div class="birthday-decoration">
+          <span>✦</span>
+          <span>🎂</span>
+          <span>✦</span>
+        </div>
 
-        <div class="envelope-area">
-          <div class="envelope" id="envelope" onclick="openLetter()">
+        <!-- ENVELOPE -->
+        <div class="envelope-container">
+          <div class="envelope" id="envelope">
             <div class="envelope-back"></div>
 
             <div class="letter-preview">
-              <h3>Dear Ian,</h3>
-              <p>
-                A special message for your special day. Open this letter to see
-                what's inside...
-              </p>
+              <div class="preview-lines">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+              <span class="preview-text">A letter for you</span>
             </div>
 
-            <div class="envelope-flap"></div>
             <div class="envelope-front"></div>
 
-            <div class="wax-seal">I</div>
+            <div class="envelope-flap"></div>
+
+            <div class="wax-seal">
+              <span>✦</span>
+            </div>
           </div>
+
+          <p class="envelope-hint">Click the envelope to open your surprise</p>
+
+          <button class="open-button" id="openButton">
+            Open Your Letters
+            <span>↗</span>
+          </button>
         </div>
 
-        <button class="open-button" onclick="openLetter()">
-          Open Your Birthday Letter &nbsp; →
-        </button>
-
-        <p class="hint">There's a little surprise waiting for you.</p>
-
-        <div class="footer">GREETINGS FROM QUEVON</div>
+        <div class="footer-message">
+          Made with appreciation and warm wishes.
+        </div>
       </div>
     </main>
 
-    <!-- Birthday Letter -->
-
+    <!-- LETTER MODAL -->
     <div class="modal" id="letterModal">
-      <div class="letter-paper">
-        <div class="letter-label">A Special Birthday Message</div>
+      <div class="modal-overlay"></div>
 
-        <h2>Dear Ian,</h2>
-
-        <p>Happy Birthday! 🎉</p>
-
-        <p>
-          Wishing you good health, happiness, and continued success in
-          everything you do.
-        </p>
-
-        <p>
-          I just want to take this opportunity to say how much I appreciate your
-          leadership. You're not only a great leader but also someone we can
-          learn so much from. The way you lead, share your knowledge, handle
-          challenges, and guide the team is truly inspiring.
-        </p>
-
-        <p>
-          I've learned a lot from you, and I know there's still so much more I
-          can learn. Thank you for being someone who leads by example and
-          motivates others to become better at what they do.
-        </p>
-
-        <p>
-          May this year bring you more achievements, exciting opportunities, and
-          success in everything you pursue.
-        </p>
-
-        <p class="signature">
-          Enjoy your special day, Ian! You deserve it. Cheers to another great
-          year! 🥂
-        </p>
-
-        <button class="close-button" onclick="closeLetter()">
-          Close Letter
+      <div class="letter-modal-content">
+        <button class="close-button" id="closeButton" aria-label="Close">
+          &times;
         </button>
+
+        <div class="modal-heading">
+          <span class="modal-eyebrow">WORDS FROM THE HEART</span>
+          <h2>A Few Words for You</h2>
+          <p>Messages from the people who appreciate you.</p>
+        </div>
+
+        <div class="letter-paper">
+          <div class="paper-decoration">
+            <span>✦</span>
+            <span>✦</span>
+            <span>✦</span>
+          </div>
+
+          <!-- SLIDER -->
+          <div class="letter-slider-wrapper">
+            <button
+              class="slider-button prev-button"
+              id="prevLetter"
+              aria-label="Previous letter"
+            >
+              &#10094;
+            </button>
+
+            <div class="letter-slider">
+              <div class="letter-track" id="letterTrack">
+                <!-- Individual letters load here -->
+              </div>
+            </div>
+
+            <button
+              class="slider-button next-button"
+              id="nextLetter"
+              aria-label="Next letter"
+            >
+              &#10095;
+            </button>
+          </div>
+
+          <!-- PAGINATION -->
+          <div class="slider-pagination">
+            <div class="slider-dots" id="sliderDots"></div>
+            <span class="page-indicator" id="pageIndicator"> 0 / 0 </span>
+          </div>
+
+          <div class="paper-footer">
+            <span>With warm wishes</span>
+            <span>✦</span>
+          </div>
+        </div>
       </div>
     </div>
-    <script src="script.js" defer></script>
   </body>
 </html>
