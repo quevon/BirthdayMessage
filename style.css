@@ -160,7 +160,8 @@ h1 span {
 }
 
 .envelope:hover {
-  transform: translateY(-8px);
+  /* transform: translateY(-8px); */
+  transform: none;
 }
 
 .envelope-back {
