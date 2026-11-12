@@ -678,3 +678,28 @@ h1 span {
     height: 28px;
   }
 }
+#musicToggle {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 9999;
+
+  padding: 10px 18px;
+  border: 1px solid #c69b59;
+  border-radius: 30px;
+
+  background: #1d2635;
+  color: #fff0c8;
+
+  font-size: 13px;
+  font-weight: 600;
+
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+#musicToggle:hover {
+  background: #c69b59;
+  color: #1d2635;
+  transform: translateY(-3px);
+}
